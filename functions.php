@@ -43,16 +43,16 @@ function create_poststyle() {
   register_post_type( 'media',
     array(
       'labels' => array(
-        'name' => __( 'Media' ),
-        'singular_name' => __( 'Media' )
+        'name' => __( 'Visuals' ),
+        'singular_name' => __( 'Visuals' )
       ),
       'public' => true,
       'show_ui' => true,
       'capability_type' => 'post',
       'hierarchical' => false,
       'query_var' => true,
-      'menu-icon' => 'dashicons-admin-media',
-      'rewrite' => array('slug' => 'media'),
+      'menu-icon' => 'dashicons-visibility',
+      'rewrite' => array('slug' => 'visuals'),
       'supports' => array(
         'title',
         'editor',
