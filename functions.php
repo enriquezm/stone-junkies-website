@@ -15,6 +15,7 @@ set_post_thumbnail_size( 572, 316 ); // Will need to change in the future.
 
 /* Register custome post type */
 function create_poststyle() {
+  // Custom Post Type for Members
   register_post_type( 'member',
     array(
       'labels' => array(
@@ -36,6 +37,31 @@ function create_poststyle() {
         'thumbnail',
       )
     )
+  );
+
+  // Custom Post Type for Video/images
+  register_post_type( 'media',
+    array(
+      'labels' => array(
+        'name' => __( 'Media' ),
+        'singular_name' => __( 'Media' )
+      ),
+      'public' => true,
+      'show_ui' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+      'query_var' => true,
+      'menu-icon' => 'dashicons-admin-media',
+      'rewrite' => array('slug' => 'media'),
+      'supports' => array(
+        'title',
+        'editor',
+        'excerpt',
+        'revisions',
+        'thumbnail',
+      )
+    )
+
   );
 }
 add_action( 'init', 'create_poststyle' );
