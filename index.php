@@ -71,7 +71,8 @@
 									</a>
 									<h3 class="major"><?php the_title(); ?></h3>
 									<p><?php the_excerpt(); ?></p>
-									<a href="<?php the_permalink(); ?>" class="special">Learn more</a>
+									<p>By <?php the_author(); ?></p>
+									<a href="<?php the_permalink(); ?>" class="special">Read more</a>
 								</article>
 							<?php endwhile; ?>
 						<?php endif; ?>

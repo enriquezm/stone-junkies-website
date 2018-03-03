@@ -39,6 +39,7 @@
               </a>
 							<h3 class="major"><?php the_title(); ?></h3>
 							<p><?php the_excerpt(); ?></p>
+							<p><?php the_author(); ?></p>
 							<a class="special" href="<?php the_permalink(); ?>">Read More</a>
 						</article>
 					<?php endwhile; ?>
